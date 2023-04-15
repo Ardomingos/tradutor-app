@@ -12,34 +12,38 @@
     <div class="container">
         <div class="wrapper">
             <div class="text-input">
-                <textarea class="from-text" spellcheck="false" placeholder="Coloque o texto"></textarea>
-                <textarea class="to-text" spellcheck="false" placeholder="tradução"></textarea>
+                <textarea class="from-text" spellcheck="false" placeholder="Coloque o texto">
+                </textarea>
+                <textarea class="to-text" spellcheck="false" placeholder="tradução" readonly disabled>
+                </textarea>
             </div>
+
+            <ul class="controls">
+                <li class="row from">
+                    <div class="icons">
+                        <i id="from" class="fas fa-volume-up"></i>
+                        <i id="from" class="fas fa-copy"></i>
+                    </div>
+                    <select></select>
+                </li>
+                <li class="exchange">
+                    <i class="fas fa-exchange-alt"></i>
+                </li>
+                <li class="row to">
+                    <select></select>
+                    <div class="icons">
+                        <i id="to" class="fas fa-volume-up">
+                        </i>
+                        <i id="from" class="fas fa-copy">
+                        </i>
+                    </div>
+                </li>                
+            </ul>
         </div>
-
-        <ul class="controls">
-            <li class="row from">
-                <div class="icons">
-                    <i id="from" class="fas fa-volume-up"></i>
-                    <i id="id" class="fas fa-copy"></i>
-                </div>
-                <select></select>
-            </li>
-            <li class="exchange">
-                <i class="fas fa-exchange-alt"></i>
-            </li>
-            <li class="row to">
-                <select></select>
-                <div class="icons">
-                    <i id="to" class="fas fa-volume-up"></i>
-                    <i id="id" class="fas fa-copy"></i>
-                </div>
-            </li>
-        </ul>
+        <button>Traduzir</button>
     </div>
-    <button>tradução</button>
 
-
+    
 
     <script src="js/countries.js"></script>
     <script src="js/index.js"></script>
