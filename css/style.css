@@ -146,6 +146,42 @@ body{
     background: #06283d;
 }
 
+@media (max-width: 660px){
+    .container{
+        padding: 20px;
+    }
+
+    .wrapper .text-input{
+        flex-direction: column;
+    }
+
+    .text-input .to-text{
+        border-left: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .text-input textarea{
+        height: 200px;
+    }
+
+    .controls .row .icons{
+        display: none;
+    }
+
+    .container button{
+        padding: 13px;
+        font-size: 16px;
+    }
+
+    .controls .row select{
+        font-size: 16px;
+    }
+
+    .controls .exchange{
+        font-size: 14px;
+    }
+}
+
 
 
 
