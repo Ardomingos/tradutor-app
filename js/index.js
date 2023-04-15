@@ -7,6 +7,7 @@ const translateBtn = document.querySelector("button");
 
 
 
+
 // adiciona paises com os seus respectivos codigos no select
 
 selectTag.forEach((tag, id) => {
@@ -75,12 +76,29 @@ translateBtn.addEventListener("click", ()=>{
 icons.forEach(icon => {
     icon.addEventListener("click", ({target})=>{
         if(!fromText.value || !toText.value) return;
+
+
+        //copia para o clipboard
+        
         if(target.classList.contains("fa-copy")){
             if(target.id == "from"){
                 navigator.clipboard.writeText(fromText.value);
             }else{
                 navigator.clipboard.writeText(toText.value);
             }
+        }else{
+
+            //texto para voz
+
+            let utterance;
+            if(target.id == "from"){
+                utterance = new SpeechSynthesisUtterance(fromText.value);
+                utterance.lang = selectTag[0].value;
+            }else{
+                utterance = new SpeechSynthesisUtterance(toText.value);
+                utterance.lang = selectTag[1].value;
+            }
+            speechSynthesis.speak(utterance);
         }
-    })
-})
+    });
+});

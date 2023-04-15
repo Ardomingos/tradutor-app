@@ -1,3 +1,6 @@
+//  Const com os paises e suas siglas
+
+
 const countries = {
     "am-ET": "Amharic",
     "ar-SA": "Arabic",
